@@ -16,7 +16,9 @@ public class Cactus
 
     private long birthday; // in milliseconds
     private int age; // in days
-    private int hp;
+    private int level;
+    private int maxHp;
+    private int currentHp;
     private String cactusColor; // in hex
     private String potColor; // in hex
     private boolean isEvilMode;
@@ -26,12 +28,15 @@ public class Cactus
 
     }
 
-    public Cactus(String uuid, long birthday, int age, int hp, String cactusColor, String potColor, boolean isEvilMode)
+    public Cactus(String uuid, long birthday, int age, int level, int maxHp,
+                  String cactusColor, String potColor, boolean isEvilMode)
     {
         this.uuid = uuid;
         this.birthday = birthday;
         this.age = age;
-        this.hp = hp;
+        this.level = level;
+        this.maxHp = maxHp;
+        this.currentHp = maxHp;
         this.cactusColor = cactusColor;
         this.potColor = potColor;
         this.isEvilMode = isEvilMode;
@@ -77,14 +82,34 @@ public class Cactus
         this.age = age;
     }
 
-    public int getHp()
+    public int getLevel()
     {
-        return hp;
+        return level;
     }
 
-    public void setHp(int hp)
+    public void setLevel(int level)
     {
-        this.hp = hp;
+        this.level = level;
+    }
+
+    public int getMaxHp()
+    {
+        return maxHp;
+    }
+
+    public void setMaxHp(int maxHp)
+    {
+        this.maxHp = maxHp;
+    }
+
+    public int getCurrentHp()
+    {
+        return currentHp;
+    }
+
+    public void setCurrentHp(int currentHp)
+    {
+        this.currentHp = currentHp;
     }
 
     public String getCactusColor()

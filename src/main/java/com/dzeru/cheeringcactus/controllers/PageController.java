@@ -56,7 +56,7 @@ public class PageController
 	    String cactusColor = "#669900";
 	    String potColor = "#663300";
 
-	    Cactus newCactus = new Cactus(uuid, birthday, 0, 200, cactusColor, potColor, false);
+	    Cactus newCactus = new Cactus(uuid, birthday, 0, 0, 200, cactusColor, potColor, false);
 	    cactusRepo.save(newCactus);
 
 	    User newUser = new User();
