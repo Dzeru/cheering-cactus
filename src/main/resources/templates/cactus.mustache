@@ -5,12 +5,83 @@
 	<title>Cheering Cactus</title>
 </head>
 <body>
-<input id="userUuid" type="hidden" value="{{#userUuid}}{{userUuid}}{{/userUuid}}">
+<div class="container-fluid">
+	<div class="row">
+		<input id="userUuid" type="hidden" value="{{#userUuid}}{{userUuid}}{{/userUuid}}">
 
-<span id="hp"></span>
-<h1 id="birthday"></h1>
-<h1 id="age"></h1>
+	</div>
+	<div class="row">
+		<div class="col-xs-6 col-sm-4 col-md-4">
+			<table>
+				<tr>
+					<td>
+						<button class="sqr-btn pot-clr-1"></button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<button class="sqr-btn pot-clr-2"></button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<button class="sqr-btn pot-clr-3"></button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<button class="sqr-btn pot-clr-4"></button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<button class="sqr-btn pot-clr-5"></button>
+					</td>
+				</tr>
+			</table>
+		</div>
+		<div class="col-xs-6 col-sm-4 col-md-4">
+			<span id="hp"></span>
+			<div class="cont">
+				<div class="round-section">
 
+				</div>
+				<div class="square-section">
+
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-6 col-sm-4 col-md-4">
+			<table align="right">
+				<tr>
+					<td>
+						<button class="sqr-btn cactus-clr-align cactus-clr-1"></button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<button class="sqr-btn cactus-clr-align cactus-clr-2"></button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<button class="sqr-btn cactus-clr-align cactus-clr-3"></button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<button class="sqr-btn cactus-clr-align cactus-clr-4"></button>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<button class="sqr-btn cactus-clr-align cactus-clr-5"></button>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+</div>
 <script src="/js/cactus-frontend.js"></script>
 </body>
 </html>
