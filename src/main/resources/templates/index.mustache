@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:=http://www.w3.org/1999/xhtml>
+<head>
+    {{> meta}}
+    <title>Cheering Cactus</title>
+</head>
+<body>
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+			<div class="menu">
+				<li class="f-item-1 my-5"><h1>{{#logo}}{{logo}}{{/logo}}</h1></li>
+				<li class="f-item-2 my-5"><a class="brdr" href="/newcactus">Новый кактус</a></li>
+				<li class="f-item-3 my-5"><form action="/login" method="post">
+					<input class="inpt-uuid" type="text" name="username" size="25"/>
+					<input class="brdr clrs load-btn" type="submit" value="Загрузить"/>
+					<input type="hidden" name="password"/>
+					<input type="hidden" name="_csrf" value="{{_csrf.token}}"/>
+				</form></li>
+				<li class="f-item-4 my-5"><a class="brdr" href="/about">Как играть</a></li>
+			</div>
+		</div>
+		<div class="col-md-8">
+			Some text
+		</div>
+	</div>
+</div>
+</body>
+</html>

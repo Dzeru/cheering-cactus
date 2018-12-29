@@ -1,0 +1,72 @@
+*
+{
+box-sizing: border-box;
+}
+
+body
+{
+background: #33cc99;
+color: #fff;
+}
+
+form
+{
+position: relative;
+}
+
+a
+{
+color: #fff;
+}
+
+a:hover
+{
+text-decoration:none;
+color: #fff;
+}
+
+.brdr
+{
+border: 3px #fff solid;
+border-radius: 1.5em;
+padding: 8px 8px;
+}
+
+.clrs
+{
+background: #33cc99;
+color: #fff;
+}
+
+.menu
+{
+padding-top: 10%;
+font-size: x-large;
+}
+
+.menu li
+{
+list-style: none;
+}
+
+.inpt-uuid
+{
+display: block;
+width: 100%;
+height: 2em;
+line-height: 1.5em;
+border-radius: 1.5em;
+border: 3px #fff solid;
+padding: 0 .6em;
+}
+
+.load-btn
+{
+position: absolute;
+top: 0;
+right: 0;
+height: 2em;
+line-height: 1em;
+border-radius: 1.5em;
+border: 3px #fff solid;
+}
