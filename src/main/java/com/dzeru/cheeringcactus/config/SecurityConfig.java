@@ -24,7 +24,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
                 .authorizeRequests()
                 .antMatchers("/resources/**", "/", "/newcactus", "/greeting").permitAll()
                 .anyRequest().authenticated()
-                .and().formLogin().loginPage("/").loginProcessingUrl("/login").defaultSuccessUrl("/cactus").failureUrl("/?error").permitAll()
+                .and().formLogin().loginPage("/").loginProcessingUrl("/login").defaultSuccessUrl("/cactus").failureUrl("/?loginerror").permitAll()
                 .and().logout().logoutSuccessUrl("/").permitAll();
     }
 
