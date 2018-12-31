@@ -159,3 +159,10 @@ background: green;
 	left: 35%;
 	right: 50%;
 }
+
+.faq
+{
+display: inline-block;
+width: 60%;
+float: left;
+}

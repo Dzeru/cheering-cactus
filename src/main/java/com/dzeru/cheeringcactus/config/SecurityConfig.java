@@ -22,7 +22,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter
     {
         httpSecurity
                 .authorizeRequests()
-                .antMatchers("/resources/**", "/", "/newcactus", "/greeting").permitAll()
+                .antMatchers("/resources/**", "/", "/newcactus", "/greeting", "/howtoplay").permitAll()
                 .anyRequest().authenticated()
                 .and().formLogin().loginPage("/").loginProcessingUrl("/login").defaultSuccessUrl("/cactus").failureUrl("/?loginerror").permitAll()
                 .and().logout().logoutSuccessUrl("/").permitAll();

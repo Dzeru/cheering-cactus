@@ -77,4 +77,12 @@ public class PageController
 
 		return "greeting";
     }
+
+    @GetMapping("/howtoplay")
+	public String howToPlay()
+    {
+    	logger.info("Get howtoplay page");
+
+    	return "howtoplay";
+    }
 }
