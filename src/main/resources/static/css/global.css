@@ -138,25 +138,28 @@ background: green;
 .round-section
 {
 	display: inline-block;
-	width: 100px; height: 200px;
+	width: 80px;
+	height: 200px;
 	background: #9CD6C0;
 	border-radius: 50px/100px;
 
 	position: absolute;
-	left: 45%;
+	left: 50%;
+	right: 50%;
 }
 
 .square-section
 {
 	display: inline-block;
-	height: 0; width: 100px;
+	height: 0;
+	width: 120px;
 	border-top: 100px solid #FFE344;
 	border-left: 30px solid transparent;
 	border-right: 30px solid transparent;
 
 	position: absolute;
 	top: 50%;
-	left: 35%;
+	left: 40%;
 	right: 50%;
 }
 

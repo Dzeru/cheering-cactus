@@ -4,6 +4,8 @@ import com.dzeru.cheeringcactus.constants.Level;
 import com.dzeru.cheeringcactus.entities.Cactus;
 import com.dzeru.cheeringcactus.entities.User;
 import com.dzeru.cheeringcactus.repos.CactusRepo;
+import com.dzeru.cheeringcactus.repos.UserRepo;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -26,6 +28,9 @@ public class CactusController
     @Autowired
     CactusRepo cactusRepo;
 
+    @Autowired
+    UserRepo userRepo;
+
     @RequestMapping(value = "/loadcactus", method = RequestMethod.GET)
     public Cactus loadCactus(@RequestParam(value = "uuid") String uuid, @AuthenticationPrincipal User user)
     {
@@ -34,6 +39,7 @@ public class CactusController
             logger.info("Start to process request for cactus loading with uuid = " + uuid);
 
             user.setLastVisit(System.currentTimeMillis());
+            userRepo.save(user);
 
             Cactus cactus = cactusRepo.findByUuid(uuid);
 
@@ -45,7 +51,7 @@ public class CactusController
             cactus.setLevel(Level.getInstance().getLevelByAge(age));
 
             // milliseconds -> seconds -> minutes -> hours
-            int timeSinceLastVisit = (int) (currentTime - user.getLastVisit() / 1000L / 60L / 60L);
+            int timeSinceLastVisit = (int) ((currentTime - user.getLastVisit()) / 1000L / 60L / 60L);
             int newCurrentHp = cactus.getCurrentHp();
             Random random = new Random();
 
