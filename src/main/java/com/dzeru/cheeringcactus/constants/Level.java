@@ -29,6 +29,9 @@ public class Level
 
 	public int getLevelByAge(int days)
 	{
+		if(days < 0)
+			return -1;
+
 		for(int i = 0; i < LevelAgeHp.length; i++)
 		{
 			if(LevelAgeHp[i][0] == days)
@@ -41,6 +44,9 @@ public class Level
 
 	public int getHpByAge(int days)
 	{
+		if(days < 0)
+			return -1;
+
 		for(int i = 0; i < LevelAgeHp.length; i++)
 		{
 			if(LevelAgeHp[i][0] == days)
@@ -53,6 +59,9 @@ public class Level
 
 	public int getLevelByHp(int hp)
 	{
+		if(hp < 0)
+			return -1;
+
 		for(int i = 0; i < LevelAgeHp.length; i++)
 		{
 			if(LevelAgeHp[i][1] == hp)
@@ -65,6 +74,9 @@ public class Level
 
 	public int getAgeByHp(int hp)
 	{
+		if(hp < 0)
+			return -1;
+
 		for(int i = 0; i < LevelAgeHp.length; i++)
 		{
 			if(LevelAgeHp[i][1] == hp)
